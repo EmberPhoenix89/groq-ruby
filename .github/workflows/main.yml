@@ -32,3 +32,5 @@ jobs:
         bundler-cache: true
     - name: Run the default task
       run: bundle exec rake
+    - name: Run the test suite with lower Faraday versions
+      run: FARADAY_VERSION=1.10.3 bin/setup && bundle exec rake test
